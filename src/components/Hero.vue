@@ -1,0 +1,111 @@
+<template>
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">portfolio</h1>
+
+      <!-- Nome sobreposto -->
+      <p class="hero-subtitle">Heloysa Assis</p>
+
+      <div class="social-media">
+        <div class="social-item">
+          <i class="fa-brands fa-linkedin-in"></i>
+          <a href="#" class="social-link">LinkedIn</a>
+        </div>
+
+        <div class="social-item">
+          <i class="fa-brands fa-github"></i>
+          <a href="#" class="social-link">GitHub</a>
+        </div>
+
+        <div class="social-item">
+          <i class="fa-brands fa-x-twitter"></i>
+          <a href="#" class="social-link">Twitter</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
+
+<script>
+export default {
+  name: "Hero",
+};
+</script>
+
+<style>
+:root {
+  --tan: #d1c791;
+  --champagne-pink: #f3d8ce;
+  --blood: #5e1104;
+  --old-moss-green: #7f8330;
+  --antique-white: #ffecda;
+  --licorice: #1e151c;
+  --cappuccino: #59382c;
+  --pale-violet-red: #c66e8c;
+  --white: #ffffff;
+  --black: #000000;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--pale-violet-red);
+  text-align: center;
+}
+
+.hero-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-title {
+  font-size: 9rem;
+  color: var(--antique-white);
+  position: relative;
+  margin: 0;
+  line-height: 1;
+}
+
+.hero-subtitle {
+  font-family: "Pinyon Script", cursive;
+  font-weight: 500;
+  font-size: 4rem;
+  color: var(--cappuccino);
+  position: absolute;
+  top: 15%;         
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+.social-media {
+  display: flex;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.social-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+i {
+  padding: 10px;
+  border-radius: 50%;
+  background-color: var(--antique-white);
+  color: var(--pale-violet-red);
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.social-link {
+  color: var(--antique-white);
+  font-weight: 600;
+  text-decoration: none;
+}
+</style>
