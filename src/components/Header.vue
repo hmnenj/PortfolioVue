@@ -5,7 +5,7 @@
 
       <ul class="nav-menu">
         <li><a class="nav-link" href="#">Home</a></li>
-        <li><a class="nav-link" href="#">About</a></li>
+        <li><a class="nav-link" href="#about">About</a></li>
         <li><a class="nav-link" href="#">Work</a></li>
       </ul>
 

@@ -3,7 +3,6 @@
     <div class="hero-content">
       <h1 class="hero-title">portfolio</h1>
 
-      <!-- Nome sobreposto -->
       <p class="hero-subtitle">Heloysa Assis</p>
 
       <div class="social-media">
