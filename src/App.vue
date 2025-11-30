@@ -1,25 +1,20 @@
-<script>
-import Header from './components/Header.vue'
-import Hero from './components/Hero.vue'
-import About from './components/About.vue'
-
-export default {
-  name: 'App',
-  components: {
-    Header,
-    Hero,
-    About
-  }
-}
-</script>
-
 <template>
-  <div>
-    <Header />
-    <Hero />
-    <About />
+  <Header />
+
+  <div id="app">
+    <transition name="soft-slide" mode="out-in">
+      <router-view />
+    </transition>
   </div>
 </template>
+
+<script>
+import Header from "./components/Header.vue"
+
+export default {
+  components: { Header }
+}
+</script>
 
 <style>
 html {
@@ -29,5 +24,21 @@ html {
 body {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+.soft-slide-enter-active,
+.soft-slide-leave-active {
+  transition: all .5s cubic-bezier(.4, 0, .2, 1);
+}
+
+.soft-slide-enter-from {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.soft-slide-leave-to {
+  opacity: 0;
+  transform: translateY(-20px);
 }
 </style>

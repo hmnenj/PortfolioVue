@@ -4,9 +4,24 @@
       <h1 class="logo">MyPortfolio</h1>
 
       <ul class="nav-menu">
-        <li><a class="nav-link" href="#">Home</a></li>
-        <li><a class="nav-link" href="#about">About</a></li>
-        <li><a class="nav-link" href="#">Work</a></li>
+
+        <template v-if="isWorkPage">
+          <li>
+            <router-link class="nav-link" to="/">Home</router-link>
+          </li>
+        </template>
+
+        <template v-else>
+          <li><router-link class="nav-link" to="/" @click.native="scrollTop">
+              Home
+            </router-link>
+
+          </li>
+          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link" href="#skills">Skills</a></li>
+          <li><router-link class="nav-link" to="/work">Work</router-link></li>
+        </template>
+
       </ul>
 
       <button class="menu-btn" @click="toggleMenu">
@@ -17,9 +32,20 @@
     </nav>
 
     <ul class="mobile-menu" :class="{ open: menuOpen }">
-      <li><a class="nav-link" href="#">Home</a></li>
-      <li><a class="nav-link" href="#">About</a></li>
-      <li><a class="nav-link" href="#">Work</a></li>
+
+      <template v-if="isWorkPage">
+        <li>
+          <router-link class="nav-link" to="/" @click="toggleMenu">Home</router-link>
+        </li>
+      </template>
+
+      <template v-else>
+        <li><router-link class="nav-link" to="/" @click="toggleMenu">Home</router-link></li>
+        <li><a class="nav-link" href="#about" @click="toggleMenu">About</a></li>
+        <li><a class="nav-link" href="#skills" @click="toggleMenu">Skills</a></li>
+        <li><router-link class="nav-link" to="/work" @click="toggleMenu">Work</router-link></li>
+      </template>
+
     </ul>
   </header>
 </template>
@@ -27,18 +53,33 @@
 <script>
 export default {
   name: "Header",
+
   data() {
     return {
       menuOpen: false,
-    };
+    }
   },
+
+  computed: {
+    isWorkPage() {
+      return this.$route.path === "/work"
+    }
+  },
+
   methods: {
     toggleMenu() {
-      this.menuOpen = !this.menuOpen;
+      this.menuOpen = !this.menuOpen
     },
-  },
-};
+    scrollTop() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }
+
+}
+
+
 </script>
+
 
 <style>
 * {

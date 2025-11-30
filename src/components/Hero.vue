@@ -1,5 +1,5 @@
 <template>
-  <section class="hero">
+  <section class="hero" id="hero">
     <div class="hero-content">
       <h1 class="hero-title">portfolio</h1>
 
@@ -13,7 +13,7 @@
 
         <div class="social-item">
           <i class="fa-brands fa-github"></i>
-          <a href="#" class="social-link">GitHub</a>
+          <a href="https://github.com/hmnenj" class="social-link">GitHub</a>
         </div>
 
         <div class="social-item">
@@ -31,7 +31,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 :root {
   --tan: #d1c791;
   --champagne-pink: #f3d8ce;
@@ -75,7 +75,7 @@ export default {
   font-size: 4rem;
   color: var(--cappuccino);
   position: absolute;
-  top: 15%;         
+  top: 15%;
   left: 50%;
   transform: translate(-50%, -50%);
   white-space: nowrap;
@@ -106,5 +106,10 @@ i {
   color: var(--antique-white);
   font-weight: 600;
   text-decoration: none;
+  transition: ease;
+}
+
+.social-link:hover {
+  color: var(--cappuccino);
 }
 </style>
