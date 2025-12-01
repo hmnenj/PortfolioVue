@@ -41,28 +41,30 @@ export default {
     --black: #000000;
 }
 
+footer {
+    width: 100%;
+}
+
 .footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 10%;
-    min-height: 100vh;
+    min-height: 80vh;
     background-color: var(--antique-white);
+    flex-wrap: wrap; 
 }
 
 .footer-content {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
 }
 
-
 .footer-title {
-    font-size: 7rem;
+    font-size: 5rem;
     color: var(--pale-violet-red);
-    position: relative;
     margin: 0;
-    line-height: 1;
+    line-height: 1.1;
 }
 
 .social-media {
@@ -72,11 +74,10 @@ export default {
     text-align: left;
 }
 
-
 .social-item {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.7rem;
 }
 
 i {
@@ -91,13 +92,53 @@ i {
 
 i:hover {
     transform: scale(1.15);
-    border-color: var(--pale-violet-red);
 }
-
 
 .social-link {
     color: var(--pale-violet-red);
     font-weight: 600;
     text-decoration: none;
+}
+
+
+@media (max-width: 992px) {
+    .footer {
+        padding: 40px 6%;
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    .footer-title {
+        font-size: 4rem;
+        text-align: center;
+    }
+
+    .social-media {
+        text-align: center;
+    }
+
+    .social-item {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-title {
+        font-size: 3rem;
+    }
+
+    .social-media {
+        gap: 1.5rem;
+    }
+
+    i {
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+
+    .social-link {
+        font-size: 1rem;
+    }
 }
 </style>

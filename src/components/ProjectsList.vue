@@ -42,6 +42,7 @@ export default {
     min-height: 100vh;
     background-color: var(--pale-violet-red);
     text-align: center;
+    padding: 2rem;
 }
 
 .projects-title {

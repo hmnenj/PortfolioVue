@@ -1,11 +1,6 @@
 <template>
   <Header />
-
-  <div id="app">
-    <transition name="soft-slide" mode="out-in">
-      <router-view />
-    </transition>
-  </div>
+  <router-view />
 </template>
 
 <script>
@@ -15,6 +10,7 @@ export default {
   components: { Header }
 }
 </script>
+
 
 <style>
 html {

@@ -5,12 +5,7 @@
             <p class="skills-subtitle">Here are some of my skills</p>
 
             <div class="skills-group">
-                <div 
-                    class="skill" 
-                    v-for="skill in skills" 
-                    :key="skill.name" 
-                    @click="openModal(skill)"
-                >
+                <div class="skill" v-for="skill in skills" :key="skill.name" @click="openModal(skill)">
                     <i :class="skill.icon"></i>
                     <p class="skill-description">{{ skill.name }}</p>
                 </div>
@@ -63,7 +58,7 @@ export default {
 </script>
 
 
-<style >
+<style>
 :root {
     --tan: #d1c791;
     --champagne-pink: #f3d8ce;
@@ -156,14 +151,13 @@ export default {
 .modal-overlay {
     position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.6);
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: fadeIn 0.3s ease;
+    padding: 20px;
 }
 
 .modal-box {
@@ -172,7 +166,8 @@ export default {
     border-radius: 15px;
     width: 400px;
     max-width: 85%;
-    text-align: center;
+    max-height: 90vh;
+    overflow-y: auto;
     animation: slideUp 0.3s ease;
 }
 
@@ -218,6 +213,41 @@ export default {
     to {
         transform: translateY(0);
         opacity: 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-box {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .skill-name {
+        font-size: 1.3rem;
+    }
+
+    .skill-modal-description {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .modal-box {
+        padding: 20px;
+        margin: 25%;
+    }
+
+    .skill-name {
+        font-size: 1.3rem;
+    }
+
+    .skill-modal-description {
+        font-size: 1rem;
+    }
+
+    .close-btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
     }
 }
 </style>

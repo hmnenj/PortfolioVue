@@ -30,7 +30,6 @@ export default {
     }
 }
 </script>
-
 <style scoped>
 :root {
     --tan: #d1c791;
@@ -49,7 +48,8 @@ export default {
     background-color: var(--antique-white);
     padding: 1.8rem;
     border-radius: 20px;
-    width: 320px;
+    width: 100%;
+    max-width: 350px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
     display: flex;
     flex-direction: column;
@@ -78,8 +78,6 @@ export default {
     display: flex;
     flex-wrap: wrap;
     gap: .5rem;
-    cursor: default;
-
 }
 
 .tag {
@@ -94,6 +92,7 @@ export default {
 .links {
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .btn {
@@ -105,6 +104,8 @@ export default {
     color: var(--antique-white);
     font-weight: 600;
     transition: background .3s;
+    flex: 1;
+    text-align: center;
 }
 
 .btn:hover {
@@ -120,5 +121,25 @@ export default {
 .demo:hover {
     background-color: transparent;
     color: var(--cappuccino);
+}
+
+@media (max-width: 480px) {
+    .project-card {
+        padding: 1.3rem;
+        max-width: 100%;
+    }
+
+    .project-title {
+        font-size: 1.4rem;
+    }
+
+    .project-description {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        padding: 0.45rem 0.8rem;
+        font-size: 0.9rem;
+    }
 }
 </style>

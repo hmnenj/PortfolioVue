@@ -28,7 +28,6 @@ export default {
     name: "About",
 };
 </script>
-
 <style scoped>
 :root {
     --tan: #d1c791;
@@ -50,38 +49,35 @@ export default {
     min-height: 100vh;
     background-color: var(--antique-white);
     text-align: center;
+    padding: 40px 20px;
 }
 
 .about-content {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    max-width: 1200px;
+    width: 100%;
 }
 
 .about-title {
-    font-size: 7rem;
+    font-size: 4.5rem;
     color: var(--pale-violet-red);
-    position: relative;
-    margin: 0;
-    line-height: 1;
+    margin-bottom: 20px;
+    line-height: 1.1;
 }
 
 .about-me {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    gap: 20px;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
 .about-description {
     font-size: 1.12rem;
     color: var(--licorice);
     max-width: 800px;
-    margin-top: 30px;
-    line-height: 1.5;
+    line-height: 1.6;
     text-align: justify;
-    margin-right: 5%;
 }
 
 .self {
@@ -95,5 +91,43 @@ export default {
 
 .self:hover {
     border-radius: 40% 60% 45% 55% / 55% 40% 60% 45%;
+}
+
+
+@media (max-width: 992px) {
+    .about-title {
+        font-size: 3.5rem;
+    }
+
+    .about-description {
+        font-size: 1rem;
+        max-width: 90%;
+    }
+
+    .self {
+        width: 220px;
+        height: 220px;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-title {
+        font-size: 2.8rem;
+    }
+
+    .about-me {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-description {
+        text-align: center; 
+        margin: 0 10px;
+    }
+
+    .self {
+        width: 180px;
+        height: 180px;
+    }
 }
 </style>

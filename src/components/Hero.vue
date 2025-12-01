@@ -30,7 +30,6 @@ export default {
   name: "Hero",
 };
 </script>
-
 <style scoped>
 :root {
   --tan: #d1c791;
@@ -45,11 +44,16 @@ export default {
   --black: #000000;
 }
 
+body {
+  margin-top: 80px;
+}
+
 .hero {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  padding: 0 20px;
   background-color: var(--pale-violet-red);
   text-align: center;
 }
@@ -64,7 +68,6 @@ export default {
 .hero-title {
   font-size: 9rem;
   color: var(--antique-white);
-  position: relative;
   margin: 0;
   line-height: 1;
 }
@@ -74,10 +77,12 @@ export default {
   font-weight: 500;
   font-size: 4rem;
   color: var(--cappuccino);
+
   position: absolute;
-  top: 15%;
+  top: 18%;
   left: 50%;
   transform: translate(-50%, -50%);
+
   white-space: nowrap;
 }
 
@@ -106,10 +111,68 @@ i {
   color: var(--antique-white);
   font-weight: 600;
   text-decoration: none;
-  transition: ease;
+  transition: color .3s ease;
 }
 
 .social-link:hover {
   color: var(--cappuccino);
+}
+
+
+@media (max-width: 992px) {
+
+  .hero-title {
+    font-size: 8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 3rem;
+    top: 22%;
+  }
+
+  .social-media {
+    margin-top: 3rem;
+    gap: 1.5rem;
+  }
+
+  i {
+    font-size: 1.1rem;
+    padding: 8px;
+  }
+
+  .social-link {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .hero-title {
+    font-size: 5.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 3.5rem;
+    top: 5%;
+  }
+
+  .social-media {
+    flex-direction: column;
+    margin-top: 2.5rem;
+    gap: 1.2rem;
+  }
+
+  .social-item {
+    justify-content: center;
+  }
+
+  i {
+    font-size: 1rem;
+    padding: 8px;
+  }
+
+  .social-link {
+    font-size: 0.95rem;
+  }
 }
 </style>

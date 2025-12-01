@@ -86,6 +86,10 @@ export default {
   font-family: 'Poppins', sans-serif;
 }
 
+body {
+  margin-top: 80px;
+}
+
 a,
 ul {
   text-decoration: none;
@@ -190,6 +194,22 @@ ul {
 }
 
 @media (max-width: 900px) {
+  .header {
+    width: 100%;
+  }
+  .nav-menu {
+    display: none;
+  }
+
+  .menu-btn {
+    display: flex;
+  }
+}
+
+@media (max-width: 648px) {
+  .header {
+    width: 80%;
+  }
   .nav-menu {
     display: none;
   }
