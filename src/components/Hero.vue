@@ -156,7 +156,7 @@ i {
   }
 
   .hero-title {
-    font-size: 5.5rem;
+    font-size: 4.5rem;
   }
 
   .hero-subtitle {

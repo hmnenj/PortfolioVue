@@ -57,4 +57,10 @@ export default {
     flex-wrap: wrap;
     gap: 2rem;
 }
+
+@media (max-width: 900px) {
+    .projects-title {
+        font-size: 4rem;
+    }
+}
 </style>
