@@ -17,7 +17,7 @@
                     like chess and sudoku.
                 </p>
 
-                <img class="self" src="../assets/img/cat.jpg" alt="">
+                <img class="self" src="../assets/img/eu.jpeg" alt="">
             </div>
         </div>
     </section>

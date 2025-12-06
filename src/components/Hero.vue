@@ -8,7 +8,7 @@
       <div class="social-media">
         <div class="social-item">
           <i class="fa-brands fa-linkedin-in"></i>
-          <a href="#" class="social-link">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/heloysa-assis-a9ab4a307/" class="social-link">LinkedIn</a>
         </div>
 
         <div class="social-item">
@@ -16,10 +16,10 @@
           <a href="https://github.com/hmnenj" class="social-link">GitHub</a>
         </div>
 
-        <div class="social-item">
+        <!-- <div class="social-item">
           <i class="fa-brands fa-x-twitter"></i>
           <a href="#" class="social-link">Twitter</a>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
@@ -47,6 +47,8 @@ export default {
 body {
   margin-top: 80px;
 }
+
+
 
 .hero {
   display: flex;
@@ -119,7 +121,10 @@ i {
 }
 
 
-@media (max-width: 992px) {
+@media (max-width: 900px) {
+  .hero {
+    padding: 0 15px;
+  }
 
   .hero-title {
     font-size: 8rem;

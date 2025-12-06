@@ -208,7 +208,7 @@ ul {
 
 @media (max-width: 648px) {
   .header {
-    width: 80%;
+    width: 100%;
   }
   .nav-menu {
     display: none;

@@ -222,6 +222,12 @@ export default {
         padding: 20px;
     }
 
+    .skills-group {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        padding: 0 !important;
+    }
+
     .skill-name {
         font-size: 1.3rem;
     }
@@ -235,6 +241,12 @@ export default {
     .modal-box {
         padding: 20px;
         margin: 25%;
+    }
+
+    .skills-group {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        padding: 0 !important;
     }
 
     .skill-name {
