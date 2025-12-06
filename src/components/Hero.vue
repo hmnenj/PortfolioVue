@@ -123,7 +123,7 @@ i {
 
 @media (max-width: 900px) {
   .hero {
-    padding: 0 15px;
+    padding: 0 30px;
   }
 
   .hero-title {
@@ -151,6 +151,9 @@ i {
 }
 
 @media (max-width: 600px) {
+  .hero {
+    padding: 0 30px;
+  }
 
   .hero-title {
     font-size: 5.5rem;
